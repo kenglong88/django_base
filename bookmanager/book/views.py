@@ -5,4 +5,9 @@ from django.http import HttpRequest, HttpResponse
 
 
 def index(request):
-    return HttpResponse('ok')
+    # return HttpResponse('ok')
+    context = {
+        'name': 'Chris'
+
+    }
+    return render(request, 'book/index.html',context=context)
